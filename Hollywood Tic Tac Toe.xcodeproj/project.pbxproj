@@ -9,13 +9,37 @@
 /* Begin PBXBuildFile section */
 		32A935972BE8CD3800DAD4A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935962BE8CD3800DAD4A9 /* AppDelegate.swift */; };
 		32A935992BE8CD3800DAD4A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935982BE8CD3800DAD4A9 /* SceneDelegate.swift */; };
-		32A9359B2BE8CD3800DAD4A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9359A2BE8CD3800DAD4A9 /* ViewController.swift */; };
+		32A9359B2BE8CD3800DAD4A9 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9359A2BE8CD3800DAD4A9 /* SplashVC.swift */; };
 		32A9359E2BE8CD3800DAD4A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A9359C2BE8CD3800DAD4A9 /* Main.storyboard */; };
 		32A935A02BE8CD6700DAD4A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A9359F2BE8CD6700DAD4A9 /* Assets.xcassets */; };
 		32A935A32BE8CD6700DAD4A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A935A12BE8CD6700DAD4A9 /* LaunchScreen.storyboard */; };
 		32A935AE2BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935AD2BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeTests.swift */; };
 		32A935B82BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935B72BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeUITests.swift */; };
 		32A935BA2BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935B92BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeUITestsLaunchTests.swift */; };
+		32A935C92BE8DF8400DAD4A9 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935C82BE8DF8400DAD4A9 /* WebServices.swift */; };
+		32A935CB2BE8E18D00DAD4A9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935CA2BE8E18C00DAD4A9 /* Reachability.swift */; };
+		32A935CE2BE8E21200DAD4A9 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935CD2BE8E21200DAD4A9 /* Helper.swift */; };
+		32A935D02BE8E25100DAD4A9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935CF2BE8E25100DAD4A9 /* Constant.swift */; };
+		32A935D22BE8E27800DAD4A9 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935D12BE8E27800DAD4A9 /* PreferenceManager.swift */; };
+		32A935D52BE8E32400DAD4A9 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 32A935D42BE8E32400DAD4A9 /* NVActivityIndicatorViewExtended */; };
+		32A935D92BE8EF9700DAD4A9 /* NotificationCenterKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A935D82BE8EF9700DAD4A9 /* NotificationCenterKeys.swift */; };
+		8103CC2F2BEA110C00D9D32F /* GameRulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103CC2E2BEA110C00D9D32F /* GameRulesVC.swift */; };
+		8103CC322BEA115200D9D32F /* WebOpenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103CC312BEA115200D9D32F /* WebOpenVC.swift */; };
+		8103CC362BEA12FE00D9D32F /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103CC352BEA12FE00D9D32F /* PrivacyPolicyVC.swift */; };
+		8103CC382BEA132600D9D32F /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103CC372BEA132600D9D32F /* TermsOfUseVC.swift */; };
+		8103CC3B2BEA38BA00D9D32F /* PlayGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103CC3A2BEA38BA00D9D32F /* PlayGameVC.swift */; };
+		8103CC3E2BEA3A0400D9D32F /* TicTacToeGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103CC3D2BEA3A0400D9D32F /* TicTacToeGameVC.swift */; };
+		812073792BEBB772007A0DBF /* ScoresListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812073772BEBB772007A0DBF /* ScoresListTVC.swift */; };
+		8120737A2BEBB772007A0DBF /* ScoresListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812073782BEBB772007A0DBF /* ScoresListTVC.xib */; };
+		8161FBB02BE92D0B002FD1F4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161FBAF2BE92D0A002FD1F4 /* LoginVC.swift */; };
+		8161FBB32BE9318C002FD1F4 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161FBB22BE9318C002FD1F4 /* UserProfileModel.swift */; };
+		8161FBB72BE93295002FD1F4 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161FBB62BE93295002FD1F4 /* UIView+extension.swift */; };
+		81B411062BE9F1AB00734F3B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B411052BE9F1AB00734F3B /* HomeVC.swift */; };
+		81BF9FD32BEA0A670077809F /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF9FD22BEA0A670077809F /* SettingsVC.swift */; };
+		81F99A092BEBB13A004DF8D9 /* ScoreTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F99A072BEBB13A004DF8D9 /* ScoreTVC.swift */; };
+		81F99A0A2BEBB13A004DF8D9 /* ScoreTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F99A082BEBB13A004DF8D9 /* ScoreTVC.xib */; };
+		81F99A0C2BEBB14C004DF8D9 /* ScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F99A0B2BEBB14C004DF8D9 /* ScoreVC.swift */; };
+		81F99A122BEBB424004DF8D9 /* ScoresListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F99A112BEBB424004DF8D9 /* ScoresListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +63,7 @@
 		32A935932BE8CD3800DAD4A9 /* Hollywood Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hollywood Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A935962BE8CD3800DAD4A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32A935982BE8CD3800DAD4A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		32A9359A2BE8CD3800DAD4A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32A9359A2BE8CD3800DAD4A9 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		32A9359D2BE8CD3800DAD4A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32A9359F2BE8CD6700DAD4A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32A935A22BE8CD6700DAD4A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +73,30 @@
 		32A935B32BE8CD6800DAD4A9 /* Hollywood Tic Tac ToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hollywood Tic Tac ToeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A935B72BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hollywood_Tic_Tac_ToeUITests.swift; sourceTree = "<group>"; };
 		32A935B92BE8CD6800DAD4A9 /* Hollywood_Tic_Tac_ToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hollywood_Tic_Tac_ToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32A935C82BE8DF8400DAD4A9 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		32A935CA2BE8E18C00DAD4A9 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		32A935CD2BE8E21200DAD4A9 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		32A935CF2BE8E25100DAD4A9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		32A935D12BE8E27800DAD4A9 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		32A935D82BE8EF9700DAD4A9 /* NotificationCenterKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterKeys.swift; sourceTree = "<group>"; };
+		8103CC2E2BEA110C00D9D32F /* GameRulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesVC.swift; sourceTree = "<group>"; };
+		8103CC312BEA115200D9D32F /* WebOpenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebOpenVC.swift; sourceTree = "<group>"; };
+		8103CC352BEA12FE00D9D32F /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		8103CC372BEA132600D9D32F /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
+		8103CC392BEA2B1C00D9D32F /* Hollywood Tic Tac Toe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hollywood Tic Tac Toe.entitlements"; sourceTree = "<group>"; };
+		8103CC3A2BEA38BA00D9D32F /* PlayGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameVC.swift; sourceTree = "<group>"; };
+		8103CC3D2BEA3A0400D9D32F /* TicTacToeGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGameVC.swift; sourceTree = "<group>"; };
+		812073772BEBB772007A0DBF /* ScoresListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresListTVC.swift; sourceTree = "<group>"; };
+		812073782BEBB772007A0DBF /* ScoresListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoresListTVC.xib; sourceTree = "<group>"; };
+		8161FBAF2BE92D0A002FD1F4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8161FBB22BE9318C002FD1F4 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		8161FBB62BE93295002FD1F4 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		81B411052BE9F1AB00734F3B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		81BF9FD22BEA0A670077809F /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		81F99A072BEBB13A004DF8D9 /* ScoreTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTVC.swift; sourceTree = "<group>"; };
+		81F99A082BEBB13A004DF8D9 /* ScoreTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTVC.xib; sourceTree = "<group>"; };
+		81F99A0B2BEBB14C004DF8D9 /* ScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVC.swift; sourceTree = "<group>"; };
+		81F99A112BEBB424004DF8D9 /* ScoresListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A935D52BE8E32400DAD4A9 /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +148,14 @@
 		32A935952BE8CD3800DAD4A9 /* Hollywood Tic Tac Toe */ = {
 			isa = PBXGroup;
 			children = (
-				32A935962BE8CD3800DAD4A9 /* AppDelegate.swift */,
-				32A935982BE8CD3800DAD4A9 /* SceneDelegate.swift */,
-				32A9359A2BE8CD3800DAD4A9 /* ViewController.swift */,
-				32A9359C2BE8CD3800DAD4A9 /* Main.storyboard */,
+				8103CC392BEA2B1C00D9D32F /* Hollywood Tic Tac Toe.entitlements */,
+				8161FBB42BE93258002FD1F4 /* Extensions */,
+				8161FBB12BE93177002FD1F4 /* Model */,
+				32A935D72BE8EDB300DAD4A9 /* ViewControllers */,
+				32A935CC2BE8E1EB00DAD4A9 /* Helpers */,
+				32A935C72BE8D98E00DAD4A9 /* Network Service */,
+				32A935C62BE8D78000DAD4A9 /* Storyboard */,
 				32A9359F2BE8CD6700DAD4A9 /* Assets.xcassets */,
-				32A935A12BE8CD6700DAD4A9 /* LaunchScreen.storyboard */,
 				32A935A42BE8CD6700DAD4A9 /* Info.plist */,
 			);
 			path = "Hollywood Tic Tac Toe";
@@ -127,6 +178,172 @@
 			path = "Hollywood Tic Tac ToeUITests";
 			sourceTree = "<group>";
 		};
+		32A935C62BE8D78000DAD4A9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				32A935A12BE8CD6700DAD4A9 /* LaunchScreen.storyboard */,
+				32A9359C2BE8CD3800DAD4A9 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		32A935C72BE8D98E00DAD4A9 /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+				32A935C82BE8DF8400DAD4A9 /* WebServices.swift */,
+				32A935CA2BE8E18C00DAD4A9 /* Reachability.swift */,
+			);
+			path = "Network Service";
+			sourceTree = "<group>";
+		};
+		32A935CC2BE8E1EB00DAD4A9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				32A935CD2BE8E21200DAD4A9 /* Helper.swift */,
+				32A935CF2BE8E25100DAD4A9 /* Constant.swift */,
+				32A935D12BE8E27800DAD4A9 /* PreferenceManager.swift */,
+				32A935D82BE8EF9700DAD4A9 /* NotificationCenterKeys.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		32A935D62BE8ED3D00DAD4A9 /* splashVC */ = {
+			isa = PBXGroup;
+			children = (
+				32A9359A2BE8CD3800DAD4A9 /* SplashVC.swift */,
+			);
+			path = splashVC;
+			sourceTree = "<group>";
+		};
+		32A935D72BE8EDB300DAD4A9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				81F99A052BEBB0DA004DF8D9 /* Score */,
+				8103CC3C2BEA394E00D9D32F /* TicTacToe Game */,
+				8103CC342BEA12E000D9D32F /* Terms of Use */,
+				8103CC332BEA12D600D9D32F /* Privacy Policy */,
+				8103CC302BEA113900D9D32F /* WebOpen */,
+				8103CC2D2BEA10F600D9D32F /* Game Rules */,
+				81BF9FD12BEA0A460077809F /* Settings */,
+				81B411022BE9F14800734F3B /* HomeVC */,
+				8161FBAE2BE92CF4002FD1F4 /* Login */,
+				32A935D62BE8ED3D00DAD4A9 /* splashVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8103CC2D2BEA10F600D9D32F /* Game Rules */ = {
+			isa = PBXGroup;
+			children = (
+				8103CC2E2BEA110C00D9D32F /* GameRulesVC.swift */,
+			);
+			path = "Game Rules";
+			sourceTree = "<group>";
+		};
+		8103CC302BEA113900D9D32F /* WebOpen */ = {
+			isa = PBXGroup;
+			children = (
+				8103CC312BEA115200D9D32F /* WebOpenVC.swift */,
+			);
+			path = WebOpen;
+			sourceTree = "<group>";
+		};
+		8103CC332BEA12D600D9D32F /* Privacy Policy */ = {
+			isa = PBXGroup;
+			children = (
+				8103CC352BEA12FE00D9D32F /* PrivacyPolicyVC.swift */,
+			);
+			path = "Privacy Policy";
+			sourceTree = "<group>";
+		};
+		8103CC342BEA12E000D9D32F /* Terms of Use */ = {
+			isa = PBXGroup;
+			children = (
+				8103CC372BEA132600D9D32F /* TermsOfUseVC.swift */,
+			);
+			path = "Terms of Use";
+			sourceTree = "<group>";
+		};
+		8103CC3C2BEA394E00D9D32F /* TicTacToe Game */ = {
+			isa = PBXGroup;
+			children = (
+				8103CC3D2BEA3A0400D9D32F /* TicTacToeGameVC.swift */,
+			);
+			path = "TicTacToe Game";
+			sourceTree = "<group>";
+		};
+		8161FBAE2BE92CF4002FD1F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				32A935962BE8CD3800DAD4A9 /* AppDelegate.swift */,
+				8161FBAF2BE92D0A002FD1F4 /* LoginVC.swift */,
+				32A935982BE8CD3800DAD4A9 /* SceneDelegate.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8161FBB12BE93177002FD1F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8161FBB22BE9318C002FD1F4 /* UserProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8161FBB42BE93258002FD1F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8161FBB52BE9326D002FD1F4 /* View */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8161FBB52BE9326D002FD1F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8161FBB62BE93295002FD1F4 /* UIView+extension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81B411022BE9F14800734F3B /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				81B411052BE9F1AB00734F3B /* HomeVC.swift */,
+				8103CC3A2BEA38BA00D9D32F /* PlayGameVC.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		81BF9FD12BEA0A460077809F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				81BF9FD22BEA0A670077809F /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		81F99A052BEBB0DA004DF8D9 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				81F99A062BEBB106004DF8D9 /* AllScores */,
+				81F99A072BEBB13A004DF8D9 /* ScoreTVC.swift */,
+				81F99A082BEBB13A004DF8D9 /* ScoreTVC.xib */,
+				81F99A0B2BEBB14C004DF8D9 /* ScoreVC.swift */,
+			);
+			path = Score;
+			sourceTree = "<group>";
+		};
+		81F99A062BEBB106004DF8D9 /* AllScores */ = {
+			isa = PBXGroup;
+			children = (
+				81F99A112BEBB424004DF8D9 /* ScoresListVC.swift */,
+				812073772BEBB772007A0DBF /* ScoresListTVC.swift */,
+				812073782BEBB772007A0DBF /* ScoresListTVC.xib */,
+			);
+			path = AllScores;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +360,9 @@
 			dependencies = (
 			);
 			name = "Hollywood Tic Tac Toe";
+			packageProductDependencies = (
+				32A935D42BE8E32400DAD4A9 /* NVActivityIndicatorViewExtended */,
+			);
 			productName = "Hollywood Tic Tac Toe";
 			productReference = 32A935932BE8CD3800DAD4A9 /* Hollywood Tic Tac Toe.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +435,9 @@
 				Base,
 			);
 			mainGroup = 32A9358A2BE8CD3700DAD4A9;
+			packageReferences = (
+				32A935D32BE8E32400DAD4A9 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = 32A935942BE8CD3800DAD4A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,8 +454,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8120737A2BEBB772007A0DBF /* ScoresListTVC.xib in Resources */,
 				32A935A32BE8CD6700DAD4A9 /* LaunchScreen.storyboard in Resources */,
 				32A935A02BE8CD6700DAD4A9 /* Assets.xcassets in Resources */,
+				81F99A0A2BEBB13A004DF8D9 /* ScoreTVC.xib in Resources */,
 				32A9359E2BE8CD3800DAD4A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +483,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32A9359B2BE8CD3800DAD4A9 /* ViewController.swift in Sources */,
+				32A935D02BE8E25100DAD4A9 /* Constant.swift in Sources */,
+				32A9359B2BE8CD3800DAD4A9 /* SplashVC.swift in Sources */,
 				32A935972BE8CD3800DAD4A9 /* AppDelegate.swift in Sources */,
+				8103CC362BEA12FE00D9D32F /* PrivacyPolicyVC.swift in Sources */,
+				8103CC322BEA115200D9D32F /* WebOpenVC.swift in Sources */,
+				8103CC382BEA132600D9D32F /* TermsOfUseVC.swift in Sources */,
+				32A935D92BE8EF9700DAD4A9 /* NotificationCenterKeys.swift in Sources */,
+				81B411062BE9F1AB00734F3B /* HomeVC.swift in Sources */,
+				8161FBB02BE92D0B002FD1F4 /* LoginVC.swift in Sources */,
+				81F99A122BEBB424004DF8D9 /* ScoresListVC.swift in Sources */,
+				8103CC2F2BEA110C00D9D32F /* GameRulesVC.swift in Sources */,
+				32A935C92BE8DF8400DAD4A9 /* WebServices.swift in Sources */,
+				8161FBB72BE93295002FD1F4 /* UIView+extension.swift in Sources */,
+				32A935D22BE8E27800DAD4A9 /* PreferenceManager.swift in Sources */,
+				81F99A0C2BEBB14C004DF8D9 /* ScoreVC.swift in Sources */,
+				32A935CB2BE8E18D00DAD4A9 /* Reachability.swift in Sources */,
 				32A935992BE8CD3800DAD4A9 /* SceneDelegate.swift in Sources */,
+				8161FBB32BE9318C002FD1F4 /* UserProfileModel.swift in Sources */,
+				32A935CE2BE8E21200DAD4A9 /* Helper.swift in Sources */,
+				81BF9FD32BEA0A670077809F /* SettingsVC.swift in Sources */,
+				8103CC3B2BEA38BA00D9D32F /* PlayGameVC.swift in Sources */,
+				8103CC3E2BEA3A0400D9D32F /* TicTacToeGameVC.swift in Sources */,
+				812073792BEBB772007A0DBF /* ScoresListTVC.swift in Sources */,
+				81F99A092BEBB13A004DF8D9 /* ScoreTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +681,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hollywood Tic Tac Toe/Hollywood Tic Tac Toe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN5B439WRJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hollywood Tic Tac Toe/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -462,8 +710,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hollywood Tic Tac Toe/Hollywood Tic Tac Toe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QN5B439WRJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hollywood Tic Tac Toe/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -596,6 +846,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32A935D32BE8E32400DAD4A9 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32A935D42BE8E32400DAD4A9 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32A935D32BE8E32400DAD4A9 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32A9358B2BE8CD3700DAD4A9 /* Project object */;
 }

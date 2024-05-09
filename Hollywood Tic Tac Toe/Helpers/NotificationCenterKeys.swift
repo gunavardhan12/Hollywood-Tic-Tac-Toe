@@ -6,3 +6,10 @@
 //
 
 import Foundation
+// MARK: Notification fired keys
+struct NotificationCenterKeys {
+    static let login   = "Login"
+    static let home    = "Home"
+    static let webOpen = "WebOpen"
+    static let logout  = "Logout"
+}

@@ -8,16 +8,22 @@
 import UIKit
 
 class ScoreTVC: UITableViewCell {
+    
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        containerView.addViewShadow()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func setupCell(dict: NSDictionary, indexPath: Int) {
+        scoreLabel.text = "\(dict["finalScore"] ?? "")"
+        dateLabel.text = "\(dict["date"] ?? "")"
+    }
 }

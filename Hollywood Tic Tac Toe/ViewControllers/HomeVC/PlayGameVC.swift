@@ -4,26 +4,44 @@
 //
 //  Created by Wegile-Gunavardhan on 07/05/24.
 //
-
 import UIKit
 
 class PlayGameVC: UIViewController {
 
+    @IBOutlet weak var ticTacToeView: UIView!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupBaseAppearance()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
-    */
+}
 
+// MARK: - Private
+private extension PlayGameVC {
+    
+    func setupBaseAppearance() {
+        setupNavigationBar()
+        ticTacToeView.addViewShadow()
+        ticTacToeView.roundCorners(corners:UIRectCorner.allCorners , radius: 10)
+    }
+    
+    func setupNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+}
+
+// MARK: - Action
+extension PlayGameVC {
+    
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction func ticTacToeBtn(_ sender: Any) {
+        self.navigationController?.pushViewController(TicTacToeGameVC.view(from: .Main)!, animated: true)
+    }
 }

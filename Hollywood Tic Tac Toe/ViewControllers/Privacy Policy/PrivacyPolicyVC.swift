@@ -6,24 +6,62 @@
 //
 
 import UIKit
+import WebKit
+import NVActivityIndicatorView
 
 class PrivacyPolicyVC: UIViewController {
+    
+    @IBOutlet weak var webView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupBaseAppearance()
     }
-    */
+}
 
+// MARK: - Private
+private extension PrivacyPolicyVC {
+    
+    func setupBaseAppearance() {
+        self.navigationController?.isNavigationBarHidden = true
+        let url = URL(string: "https://heropulseu.com/privacy-policy-hollywood-tic-tac-toe/")!
+        webView.load(URLRequest(url: url))
+        webView.navigationDelegate = self
+        webView.allowsBackForwardNavigationGestures = true
+        Helper().addActivityIndicator()
+        DispatchQueue.main.async {
+            Helper.startLoader()
+        }
+    }
+}
+
+// MARK: - WKNavigationDelegate
+extension PrivacyPolicyVC: WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        DispatchQueue.main.async {
+            Helper.stopLoader()
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        DispatchQueue.main.async {
+            Helper.stopLoader()
+        }
+    }
+}
+
+// MARK: - Action
+private extension PrivacyPolicyVC {
+    
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }

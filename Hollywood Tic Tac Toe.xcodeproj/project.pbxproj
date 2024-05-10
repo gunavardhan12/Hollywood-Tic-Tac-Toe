@@ -34,6 +34,7 @@
 		8161FBB02BE92D0B002FD1F4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161FBAF2BE92D0A002FD1F4 /* LoginVC.swift */; };
 		8161FBB32BE9318C002FD1F4 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161FBB22BE9318C002FD1F4 /* UserProfileModel.swift */; };
 		8161FBB72BE93295002FD1F4 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161FBB62BE93295002FD1F4 /* UIView+extension.swift */; };
+		816B7F4A2BECF55300DB3699 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816B7F492BECF55300DB3699 /* GameVC.swift */; };
 		81B411062BE9F1AB00734F3B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B411052BE9F1AB00734F3B /* HomeVC.swift */; };
 		81BF9FD32BEA0A670077809F /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF9FD22BEA0A670077809F /* SettingsVC.swift */; };
 		81F99A092BEBB13A004DF8D9 /* ScoreTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F99A072BEBB13A004DF8D9 /* ScoreTVC.swift */; };
@@ -91,6 +92,7 @@
 		8161FBAF2BE92D0A002FD1F4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8161FBB22BE9318C002FD1F4 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		8161FBB62BE93295002FD1F4 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		816B7F492BECF55300DB3699 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		81B411052BE9F1AB00734F3B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		81BF9FD22BEA0A670077809F /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		81F99A072BEBB13A004DF8D9 /* ScoreTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTVC.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		32A935D72BE8EDB300DAD4A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				816B7F482BECF4DA00DB3699 /* Game2 */,
 				81F99A052BEBB0DA004DF8D9 /* Score */,
 				8103CC3C2BEA394E00D9D32F /* TicTacToe Game */,
 				8103CC342BEA12E000D9D32F /* Terms of Use */,
@@ -304,6 +307,14 @@
 				8161FBB62BE93295002FD1F4 /* UIView+extension.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		816B7F482BECF4DA00DB3699 /* Game2 */ = {
+			isa = PBXGroup;
+			children = (
+				816B7F492BECF55300DB3699 /* GameVC.swift */,
+			);
+			path = Game2;
 			sourceTree = "<group>";
 		};
 		81B411022BE9F14800734F3B /* HomeVC */ = {
@@ -506,6 +517,7 @@
 				8103CC3B2BEA38BA00D9D32F /* PlayGameVC.swift in Sources */,
 				8103CC3E2BEA3A0400D9D32F /* TicTacToeGameVC.swift in Sources */,
 				812073792BEBB772007A0DBF /* ScoresListTVC.swift in Sources */,
+				816B7F4A2BECF55300DB3699 /* GameVC.swift in Sources */,
 				81F99A092BEBB13A004DF8D9 /* ScoreTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

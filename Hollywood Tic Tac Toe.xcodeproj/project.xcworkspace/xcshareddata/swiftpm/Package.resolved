@@ -1,4 +1,5 @@
 {
+  "originHash" : "dedd1f7d86648b077a4875bf5ca42bccc2f5333598d5b76459539683f12b4029",
   "pins" : [
     {
       "identity" : "nvactivityindicatorview",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

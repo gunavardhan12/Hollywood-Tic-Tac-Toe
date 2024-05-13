@@ -10,10 +10,12 @@ import UIKit
 class GameVC: UIViewController {
     var timer = Timer()
     var totalTime = 30
+    var setTime = 30
     var ind: Int = 0
     var score = 0
     var randomNumbers:[Int] = []
     var lastBtn:UIButton!
+    var isGameInProgress = false
     @IBOutlet weak var numberLabel:UILabel!
     @IBOutlet weak var timerLabel:UILabel!
     @IBOutlet weak var a1:UIButton!
@@ -51,7 +53,7 @@ class GameVC: UIViewController {
         return createDeferredMenu()
     }()
 
-    private lazy var elements: [UIMenuElement] = [restart,timerSettings]
+//    private lazy var elements: [UIMenuElement] = [restart,timerSettings]
     
     @IBOutlet weak var startTimerView:UIView!
     
@@ -71,6 +73,8 @@ class GameVC: UIViewController {
     @objc func viewTapped() {
         setupFunction()
         startTimerView.removeFromSuperview()
+        isGameInProgress = true
+        updateMenu()
         if !timer.isValid {
             startTimer()
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
@@ -102,6 +106,8 @@ class GameVC: UIViewController {
     func showAlert(message: String){
         numberLabel.isHidden = true
         timerLabel.isHidden = true
+        isGameInProgress = false
+        updateMenu()
         let alert = UIAlertController(title: "Result", message: message, preferredStyle: .alert)
 //        let label = UILabel(frame: CGRect(x: 60, y: 45, width: 150, height: 50))
 //        label.text = "Your score: " + gameScore()
@@ -112,6 +118,7 @@ class GameVC: UIViewController {
         alert.addAction(UIAlertAction(title: "Back", style: .default, handler: {(_)in
             self.navigationController?.popViewController(animated: true)
         }))
+        alert.editButtonItem.tintColor = UIColor.black
         present(alert, animated: true, completion: nil)
     }
     func gameScore()-> String {
@@ -148,7 +155,6 @@ extension GameVC{
     @IBAction func ButtonTapped(_ sender: UIButton){
         if sender.titleLabel?.text == numberLabel.text{
             sender.isHidden = true
-            print(ind)
             if ind < 16{
                 numberLabel.text = "\(String(describing: randomNumbers[ind]))"
             }
@@ -162,14 +168,16 @@ extension GameVC{
     func resetBtn(){
         board.removeAll()
         randomNumbers.removeAll()
-        totalTime = 30
-        timerLabel.text = "00:00"
+        totalTime = setTime
+//        timerLabel.text = "00:00"
         ind = 0
         setupFunction()
         resetButtons()
         if !timer.isValid {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
         }
+        isGameInProgress = true
+        updateMenu()
     }
     func resetButtons(){
         for button in board{
@@ -238,7 +246,18 @@ extension GameVC{
     func setTimer(seconds: Int) {
         timer.invalidate()
         totalTime = seconds
-        timerLabel.text = timeFormatted(totalTime)
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
+        setTime = seconds
+    }
+    private var elements: [UIMenuElement] {
+        if isGameInProgress {
+            return [restart]
+        } else {
+            return [timerSettings]
+        }
+    }
+
+
+    func updateMenu() {
+        button.menu = UIMenu(children: elements)
     }
 }

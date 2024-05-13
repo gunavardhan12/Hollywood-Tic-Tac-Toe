@@ -9,6 +9,7 @@ import UIKit
 class PlayGameVC: UIViewController {
 
     @IBOutlet weak var ticTacToeView: UIView!
+    @IBOutlet weak var Game2View: UIView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ private extension PlayGameVC {
         setupNavigationBar()
         ticTacToeView.addViewShadow()
         ticTacToeView.roundCorners(corners:UIRectCorner.allCorners , radius: 10)
+        Game2View.addViewShadow()
+        Game2View.roundCorners(corners:UIRectCorner.allCorners , radius: 10)
     }
     
     func setupNavigationBar() {
@@ -43,5 +46,8 @@ extension PlayGameVC {
 
     @IBAction func ticTacToeBtn(_ sender: Any) {
         self.navigationController?.pushViewController(TicTacToeGameVC.view(from: .Main)!, animated: true)
+    }
+    @IBAction func Game2Btn(_ sender: Any) {
+        self.navigationController?.pushViewController(GameVC.view(from: .Main)!, animated: true)
     }
 }

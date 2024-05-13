@@ -101,7 +101,7 @@ extension HomeVC {
     }
     
     @IBAction func playBtn(_ sender: Any) {
-        self.navigationController?.pushViewController(TicTacToeGameVC.view(from: .Main)!, animated: true)
+        self.navigationController?.pushViewController(PlayGameVC.view(from: .Main)!, animated: true)
     }
     
     @IBAction func rulesBtn(_ sender: Any) {

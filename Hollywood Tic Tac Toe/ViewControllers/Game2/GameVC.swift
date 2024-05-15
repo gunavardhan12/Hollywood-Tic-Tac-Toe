@@ -108,6 +108,7 @@ class GameVC: UIViewController {
         timerLabel.isHidden = true
         isGameInProgress = false
         updateMenu()
+        gameScore(message: message);
         let alert = UIAlertController(title: "Result", message: message, preferredStyle: .alert)
 //        let label = UILabel(frame: CGRect(x: 60, y: 45, width: 150, height: 50))
 //        label.text = "Your score: " + gameScore()
@@ -121,9 +122,16 @@ class GameVC: UIViewController {
         alert.editButtonItem.tintColor = UIColor.black
         present(alert, animated: true, completion: nil)
     }
-    func gameScore()-> String {
-        
-        return "100"
+    func gameScore(message: String){
+        if message == "Won" {
+            var score = pref.currentScore.fastestEncoding.rawValue
+            score = score + 100;
+        }
+        else if (message == "Lost"){
+            var score = pref.currentScore.fastestEncoding.rawValue
+            score = score + 100;
+        }
+        pref.currentScore = "\(score)"
     }
     func timeFormatted(_ totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds % 60

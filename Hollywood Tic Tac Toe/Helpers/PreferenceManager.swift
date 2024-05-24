@@ -64,7 +64,18 @@ class PreferenceManager: NSObject {
             return defaults.value(forKey: PreferenceKey.currentScore.rawValue) as? String ?? "0"
         }
     }
-    
+    var finalScore: String{
+        set {
+            defaults.setValue(newValue, forKey: PreferenceKey.finalScore.rawValue)
+            defaults.synchronize()
+            print("Set finalScore: \(newValue)")
+        }
+        get {
+            let value = defaults.value(forKey: PreferenceKey.finalScore.rawValue) as? String ?? "0"
+            print("Get finalScore: \(value)")
+            return value
+        }
+    }
     var gameSound: Bool {
         set{
             defaults.setValue(newValue, forKey: PreferenceKey.gameSound.rawValue)
@@ -82,4 +93,5 @@ enum PreferenceKey : String {
     case rewardScore      = "RewardScore"
     case gameSound        = "GameSound"
     case currentScore     = "CurrentScore"
+    case finalScore       = "FinalScore"
 }

@@ -17,6 +17,8 @@ class ScoreVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBaseAppearance()
+        print(scoreArray)
+        print("printing asdfaras")
     }
 }
 

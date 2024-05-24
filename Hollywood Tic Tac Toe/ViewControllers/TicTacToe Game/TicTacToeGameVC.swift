@@ -7,7 +7,8 @@
 import UIKit
 
 class TicTacToeGameVC: UIViewController {
-//    var userScore = 0
+    var keyStore = NSUbiquitousKeyValueStore()
+    var score = "0"
     enum Turn{
         case user
         case system
@@ -151,18 +152,21 @@ class TicTacToeGameVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     func checkForWinOrDraw() {
-        var val = Int(pref.currentScore.fastestEncoding.rawValue)
+        
         if checkForWin(player: userSymbol) {
             showResult(message: "You win!")
-            val += 100
+            score = "100"
+            pref.currentScore = score
+            saveScoreValue()
         } else if checkForWin(player: systemSymbol) {
             showResult(message: "System wins!")
-                val -= 50
+                score = "-50"
+            pref.currentScore = score
+            saveScoreValue()
         } else if fullBoard() {
             showResult(message: "It's a draw!")
         }
-        pref.currentScore = "\(String(describing: val))"
-        print(pref.currentScore)
+        
     }
     
     func checkForWin(player: String) -> Bool {
@@ -193,5 +197,103 @@ class TicTacToeGameVC: UIViewController {
         }))
         present(alert, animated: true)
     }
+    func saveScoreValue() {
+        let date = Date().toString(format: "dd-MM-yyyy")
+        let time = Date().toString(format: "HH:mm")
+        
+        if let appleId = keyStore.string(forKey: "appleId") {
+            if appleId == pref.userProfileModel.appleId {
+                if let scoreArr = keyStore.array(forKey: "savedScore") {
+                    if scoreArr.count > 0 {
+                        let arr = NSMutableArray(array: scoreArr)
+                        var isToday = true
+                        var index = 0
+                        for dict in scoreArr {
+                            let dictScore = (dict as! NSDictionary).mutableCopy() as! NSMutableDictionary
+                            let scoreDate = "\(dictScore["date"] ?? "")"
+                            if scoreDate == date {
+                                isToday = false
+                                let scoreValue = "\(dictScore["finalScore"] ?? "")"
+                                let scoreVal = Int(scoreValue) ?? 0
+                                let currentScore = Int(score) ?? 0
+                                var finalScore = ""
+                                if score == "JACKPOT" {
+                                    finalScore = "\(scoreVal - 100)"
+                                } else {
+                                    finalScore = "\(scoreVal + currentScore)"
+                                    //finalScore = "\(score)"
+                                }
+                                let arrAllScore = (((dict as! NSDictionary).object(forKey: "allScores")) as! NSArray).mutableCopy() as! NSMutableArray
+                                
+                                let currentDict = NSMutableDictionary()
+                                currentDict["score"] = currentScore
+                                currentDict["time"] = time
+                                arrAllScore.add(currentDict)
+                                dictScore["allScores"] = arrAllScore
+                                
+                                dictScore["finalScore"] = finalScore
+                                pref.finalScore = finalScore
+                                print(pref.finalScore)
+                                arr.replaceObject(at: index, with: dictScore)
+                                saveScoreArrayData(arr: arr)
+                                break
+                            }
+                            index = index + 1
+                        }
+                        if isToday {
+                        
+                            let dictAllScroe = NSMutableDictionary()
+                            dictAllScroe["score"] = score
+                            dictAllScroe["time"] = time
+                            let ArrAllScore = NSMutableArray()
+                            ArrAllScore.add(dictAllScroe)
+                            
+                            
+                            let dictCurrent = NSMutableDictionary()
+                            dictCurrent["finalScore"] = score
+                            dictCurrent["date"] = date
+                            dictCurrent["allScores"] = ArrAllScore
+                            
+                            arr.add(dictCurrent)
+                            saveScoreArrayData(arr: arr)
+                        }
+                    }else {
+                        saveScoreData(scoreVal: score, dateVal: date, timeVal: time)
+                    }
+                }else {
+                    saveScoreData(scoreVal: score, dateVal: date, timeVal: time)
+                }
+            }else {
+                saveScoreData(scoreVal: score, dateVal: date, timeVal: time)
+            }
+        }else {
+            saveScoreData(scoreVal: score, dateVal: date, timeVal: time)
+        }
+        keyStore.synchronize()
+    }
     
+    func saveScoreData(scoreVal: String, dateVal: String, timeVal: String) {
+        let dictAllScroe = NSMutableDictionary()
+        dictAllScroe["score"] = scoreVal
+        dictAllScroe["time"] = timeVal
+        let ArrAllScore = NSMutableArray()
+        ArrAllScore.add(dictAllScroe)
+        
+        
+        let dictCurrent = NSMutableDictionary()
+        dictCurrent["finalScore"] = scoreVal
+        dictCurrent["date"] = dateVal
+        dictCurrent["allScores"] = ArrAllScore
+        
+        let arrSave = NSMutableArray()
+        arrSave.add(dictCurrent)
+        
+        keyStore.set(arrSave, forKey: "savedScore")
+    }
+    
+    func saveScoreArrayData(arr: NSMutableArray) {
+        keyStore.set(arr, forKey: "savedScore")
+    }
 }
+
+    

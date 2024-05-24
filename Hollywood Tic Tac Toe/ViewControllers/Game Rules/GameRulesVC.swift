@@ -13,19 +13,26 @@ class GameRulesVC: UIViewController {
         super.viewDidLoad()
         self.setupBaseAppearance()
         rulesText.text = """
+Objective:
+The objective of the Finding Numbers game is to find and click on all displayed numbers within the given time limit.
 
-1.Objective: 
-    The objective of Tic Tac Toe is to place three of your marks (either "X" or "O") in a horizontal, vertical, or diagonal row on a 3x3 grid.
-2.Turn-Based Gameplay: 
-    Players take turns placing their marks on an empty cell of the grid. The game starts with one player placing their mark, followed by the other player placing their mark, and so on.
-3.Winning Condition: 
-    A player wins the game if they successfully place three of their marks in a horizontal, vertical, or diagonal row. If a player achieves this, they win the round and earn 100 points.
-4.Draw Condition: 
-    If all cells on the grid are filled and neither player has achieved a winning condition, the game is declared a draw or tie.
-5.Scoring System:
-    (i).If a player wins the round, they earn 100 points.
-    (ii).If a player loses the round, they lose 50 points.
-    (iii).If the game ends in a draw, neither player earns or loses any points.
+Gameplay:
+A 4x4 grid containing 16 numbers will be displayed.
+At each interval (15 seconds, 30 seconds, etc.), a single random number will be shown on the grid.
+You need to click on the displayed number to make it disappear.
+The game continues until all 16 numbers have been clicked, or the timer runs out.
+Winning:
+
+You win the game if you successfully click on all 16 numbers before the timer expires.
+
+Time Limits:
+The game will offer progressively increasing time limits, starting from 15 seconds and potentially going up to 90 seconds (depending on your implementation).
+
+Scoring:
+The scoring system for this game is not yet defined. Here are some options to consider:
+Points per number: Award a fixed number of points for each clicked number (e.g., 1 point per number).
+Bonus for faster completion: Grant bonus points for completing the game under a certain time threshold (e.g., additional points for finishing within half the time limit).
+Time-based scoring: Assign a higher score based on the remaining time when all numbers are clicked (e.g., more points for finishing with more time remaining).
 """
     }
 }

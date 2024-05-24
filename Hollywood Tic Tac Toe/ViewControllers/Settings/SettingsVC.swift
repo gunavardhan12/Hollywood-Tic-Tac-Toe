@@ -99,6 +99,7 @@ class SettingsVC: UIViewController {
     }
     func resetAll() {
         pref.currentScore = "0"
+        pref.finalScore = "0"
         let keyStore = NSUbiquitousKeyValueStore()
         let keys: [String] = keyStore.dictionaryRepresentation.keys.compactMap { $0 }
         keys.forEach { key in
@@ -119,6 +120,9 @@ extension SettingsVC: MFMailComposeViewControllerDelegate, UINavigationControlle
     
     func sendEmail() {
         if !MFMailComposeViewController.canSendMail() {
+            let alert = UIAlertController(title: "Alert", message: "Email not configured", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            present(alert,animated: true)
             return
         }
         let composeVC = MFMailComposeViewController()

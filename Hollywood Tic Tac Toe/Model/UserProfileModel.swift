@@ -36,6 +36,8 @@ struct UserProfileModel {
         }
         if response["name"] != nil {
             let str = "\(response["name"] ?? "")"
+            print(response)
+            print(response["name"])
             name = Helper.shared.checkNullValue(str: str)
         }
     }

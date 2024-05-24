@@ -3,7 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,20 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashImage" translatesAutoresizingMaskIntoConstraints="NO" id="tFx-kh-9a7">
-                                <rect key="frame" x="0.0" y="-26" width="390" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashImage" translatesAutoresizingMaskIntoConstraints="NO" id="tFx-kh-9a7">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="backgroundColor" red="0.54186877707182579" green="0.18836960336800335" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tFx-kh-9a7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hmj-a7-P5O"/>
-                            <constraint firstItem="tFx-kh-9a7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fis-72-7Rh"/>
-                            <constraint firstItem="tFx-kh-9a7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zw4-2v-tVe"/>
+                            <constraint firstItem="tFx-kh-9a7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pht-Cj-pvq"/>
+                            <constraint firstItem="tFx-kh-9a7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="TDm-xv-I8Y"/>
+                            <constraint firstItem="tFx-kh-9a7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VkK-2x-Dqx"/>
+                            <constraint firstAttribute="bottom" secondItem="tFx-kh-9a7" secondAttribute="bottom" id="rMu-Km-7kX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PxC-pF-IWl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,9 +10,8 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
-//    @IBOutlet weak var rewardsLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    
+    var scoreArray: [String]? = nil
     @IBOutlet weak var rewardView: UIView!
     @IBOutlet weak var scoreView: UIView!
     @IBOutlet weak var playView: UIView!
@@ -46,6 +45,7 @@ private extension HomeVC {
         playView.roundCorners(corners:UIRectCorner.allCorners , radius: 20)
         ruleView.roundCorners(corners:UIRectCorner.allCorners , radius: 20)
         settingView.roundCorners(corners:UIRectCorner.allCorners , radius: 10)
+        nameLabel.textColor = .black
     }
     
     func updateScore() {
@@ -53,11 +53,15 @@ private extension HomeVC {
             if let appleId = keyStore.string(forKey: "appleId") {
                 if appleId == pref.userProfileModel.appleId {
                     let name = keyStore.string(forKey: "name")
+                    print("name:  \(name)")
                     nameLabel.text = "Hi, \(name ?? "")👋"
-                    scoreLabel.text = "\(pref.currentScore)"
+                    getFinalScore()
+                    scoreLabel.text = "\(pref.finalScore)"
+                    
                 }else {
+                    print("in second")
                     nameLabel.text = "Hi, \(pref.userProfileModel.name)👋"
-                    scoreLabel.text = "0"
+                    scoreLabel.text = "\(pref.currentScore)"
                 }
             }else {
                 nameLabel.text = "Hi, \(pref.userProfileModel.name)👋"
@@ -78,12 +82,12 @@ extension HomeVC {
     
     @IBAction func scoreBtn(_ sender: Any) {
         if pref.isLogin {
-//            self.navigationController?.pushViewController(ScoreVC.view(from: .Main)!, animated: true)
+            self.navigationController?.pushViewController(ScoreVC.view(from: .Main)!, animated: true)
         }else {
             self.alert(message: "Please login to continue.")
         }
     }
-
+    
     func alert(message: String) {
         DispatchQueue.main.async {
             Helper().popUPWithCancel(message: message, title: "Message") { success in
@@ -107,5 +111,40 @@ extension HomeVC {
     @IBAction func rulesBtn(_ sender: Any) {
         self.navigationController?.pushViewController(GameRulesVC.view(from: .Main)!, animated: true)
     }
+    func getFinalScore() {
+        if let appleId = keyStore.string(forKey: "appleId") {
+            if appleId == pref.userProfileModel.appleId {
+                if let scoreArr = keyStore.array(forKey: "savedScore") {
+                    // Safely cast scoreArr to an array of dictionaries
+                    if let scoreData = scoreArr as? [[String: Any]] {
+                        // Access the first element (assuming you want the final score for the first day)
+                        if let firstElement = scoreData.last {
+                            // Extract final score (handle potential absence)
+                            if let finalScore = firstElement["finalScore"] as? String {
+                                pref.finalScore = finalScore
+                                scoreLabel.text = finalScore
+                            } else {
+                                print("No 'finalScore' key found in the first element.")
+                                scoreLabel.text = "0" // Or use a more appropriate default value
+                            }
+                        } else {
+                            print("No data found in the first element of scoreArr")
+                            // Handle the case where the first element is missing (e.g., set default score)
+                            scoreLabel.text = "0" // Or use a more appropriate default value
+                        }
+                    } else {
+                        print("Failed to cast scoreArr to an array of dictionaries")
+                        // Handle the case where the cast fails (e.g., set default score)
+                        scoreLabel.text = "0" // Or use a more appropriate default value
+                    }
+                } else {
+                    print("No score data found in keyStore")
+                    // Handle the case where no score data is found (e.g., set default score)
+                    scoreLabel.text = "0" // Or use a more appropriate default value
+                }
+            }
+        }
+    }
+
 }
 
